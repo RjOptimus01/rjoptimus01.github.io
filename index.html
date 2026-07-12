@@ -738,6 +738,27 @@
             inset: 14px;
             border-radius: 50%;
             border: 1px dashed rgba(236, 179, 101, .25);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .hero-badge-photo-wrap {
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid rgba(255, 255, 255, .95);
+            box-sizing: border-box;
+            box-shadow: 0 0 0 1px rgba(236, 179, 101, .35), 0 12px 30px rgba(0, 0, 0, .35);
+        }
+
+        .hero-badge-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 4%;
+            transform: scale(1.14);
+            border-radius: 50%;
         }
 
         .hero-badge-initials {
@@ -763,6 +784,7 @@
             font-size: 12px;
             font-weight: 700;
             box-shadow: 0 10px 24px rgba(236, 179, 101, .25);
+            z-index: 3;
         }
 
         .network-particles {
@@ -1903,7 +1925,9 @@
                             <span class="particle"></span>
                         </div>
                         <div class="hero-badge">
-                            <span class="hero-badge-initials">RJ</span>
+                            <div class="hero-badge-photo-wrap">
+                                <img src="assets/profile-photo.png" alt="Rishabh Jain" class="hero-badge-photo" />
+                            </div>
                             <span class="hero-badge-tag">CS · 7.95 CGPA</span>
                         </div>
                     </div>
